@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Script that sets up my  web servers for the deployment of web_static
-ssh -i ~/.ssh/id_rsa  ubuntu@54.234.186.18 <<EOF
 sudo apt-get -y update
 sudo apt-get -y install nginx 
 sudo service nginx start
@@ -17,4 +16,3 @@ sudo chown -R ubuntu:ubuntu /data/
 sed -i "38i location /hbnb_static/ { alias /data/web_static/current/; }" /etc/nginx/sites-available/default
 # Restarting Nginx
 sudo service nginx restart
-EOF
