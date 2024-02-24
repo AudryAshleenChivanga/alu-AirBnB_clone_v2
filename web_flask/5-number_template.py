@@ -1,4 +1,5 @@
-cript that starts a Flask web application. """
+#!/usr/bin/python3
+""" Script that starts a Flask web application. """
 from flask import Flask, render_template
 app = Flask(__name__)
 
